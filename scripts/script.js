@@ -1,3 +1,4 @@
+
 // Menu Link Data
 var menuLinks = [
     { text: 'about', href: '/about' },
@@ -6,8 +7,7 @@ var menuLinks = [
     { text: 'account', href: '/account' },
 ];
 
-
-//-------- Part 1 -------------------------------------------------//
+//----------------------------- DOM 1 | Part 1 ------------------------------------//
 
 // 1. Select and cache the <main> element in a variable named mainEl.
 let mainEl = document.getElementsByTagName('main');
@@ -23,7 +23,7 @@ mainEl[0].innerHTML = '<h1>DOM Manipulation</h1>';
 mainEl[0].classList.add('flex-ctr');
 
 
-//-------- Part 2 -------------------------------------------------//
+//----------------------------- DOM 1 | Part 2 ------------------------------------//
 
 // 1. Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
 let topMenuEl = document.getElementById('top-menu');
@@ -38,7 +38,7 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 topMenuEl.classList.add('flex-around');
 
 
-// ------- Part 3 ------------------------------------------------//
+//----------------------------- DOM 1 | Part 3 ------------------------------------//
 
 // 1. Iterate over the entire menuLinks array and for each "link" object:
 menuLinks.forEach((Link) => {
@@ -58,3 +58,24 @@ menuLinks.forEach((Link) => {
 })
 
 
+//----------------------------- DOM 2 | Part 3 ------------------------------------//
+
+// 1. Select and cache the <nav id ="sub-menu"> element in a variable named subMenuEl.
+let subMenuEl = document.getElementById('sub-menu');
+
+// 2. Set the height subMenuEl element to be "100%".
+subMenuEl.style.height = '100%';
+
+// 3. Set the background color of subMenuEl to the value store in the --sub-menu-bg
+// CSS custom property.
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
+
+
+// 4. Add the class of flex-around to the subMenuEl element.
+subMenuEl.classList.add('flex-around');
+
+// 5. Set the CSS position property of subMenuEl to the value of absolute.
+subMenuEl.style.position = 'absolute';
+
+// 6. Set the CSS top property of subMenuEl to the value of 0.
+subMenuEl.style.top = '0';
