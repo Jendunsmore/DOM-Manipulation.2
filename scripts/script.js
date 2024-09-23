@@ -55,16 +55,34 @@ topMenuEl.classList.add('flex-around');
 let topMenuLinks = topMenuEl.querySelectorAll('a');
 
 // 2. Attach a delegated 'click' event listener to topMenuEl.
-topMenuEl.addEventListener('click', function(event) {
-    //The first line of code of the event listener function should call the event object's preventDefault() method.
-    event.preventDefault();
-    //The second line of code of the function should immediately return if the element clicked was not an <a> element.
-    if (event.target.tagName !== 'A') {
+    // The first line of code of the event listener function should call the event
+    // object's preventDefault() method.
+    // The second line of code of the function should immediately return if the element
+    // clicked was not an <a> element.
+    // Log the content of the <a> to verify the handler is working.
+topMenuEl.addEventListener('click', function(event) { // event listener
+    event.preventDefault();  // prevent default behavior
+    if (event.target.tagName !== 'A') {  // capitalized A- tagName of HTML
         return;
     }
-    //Log the content of the <a> to verify the handler is working.
+// Now that we have references to each of these links, and a registered
+// event listener, we will want to add a toggled "active" state to each menu
+// item, showing whether or not it is currently selected:
+
+    // 1. The event listener should add the active class to the <a> element
+    // that was clicked, unless it was already active, in which case it should remove it.
+    topMenuLinks.forEach(function(Link) {  // loop through <a> inside topMenuEl
+
+    // 2. The event listener should remove the active class from each
+    // other <a> element in topMenuLinks - whether the active class exists or not.
+    // Hint: Removing a non-existent class from an element does not cause an error!
+        Link.classList.remove('active');  // removes active class from <a>
+    });
+    event.target.classList.add('active'); // active clicked
     console.log(event.target.textContent);
 });
+
+
 
 //----------------------------- DOM 1 | Part 3 ------------------------------------//
 
