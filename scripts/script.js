@@ -55,15 +55,16 @@ topMenuEl.classList.add('flex-around');
 let topMenuLinks = topMenuEl.querySelectorAll('a');
 
 // 2. Attach a delegated 'click' event listener to topMenuEl.
-
-
-    // 1. The first line of code of the event listener function should call the event object's preventDefault() method.
-
-
-    // 2. The second line of code of the function should immediately return if the element clicked was not an <a> element.
-
-
-    // 3. Log the content of the <a> to verify the handler is working.
+topMenuEl.addEventListener('click', function(event) {
+    //The first line of code of the event listener function should call the event object's preventDefault() method.
+    event.preventDefault();
+    //The second line of code of the function should immediately return if the element clicked was not an <a> element.
+    if (event.target.tagName !== 'A') {
+        return;
+    }
+    //Log the content of the <a> to verify the handler is working.
+    console.log(event.target.textContent);
+});
 
 //----------------------------- DOM 1 | Part 3 ------------------------------------//
 
