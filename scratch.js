@@ -1,3 +1,6 @@
+
+//---- Notes | Scratch paper | Brainstorming Area -----------------//
+
 /*
 addEventListener Method
 element.addEventListener(<event-name>, <callback>, <use-capture>);
@@ -100,11 +103,6 @@ let clickedLink = menuLinks.find(link => link.text === event.target.textContent)
     // other <a> element in topMenuLinks - whether the active class exists or not.
     // Hint: Removing a non-existent class from an element does not cause an error!
 */
-
-
-
-
-
 
 
         // 1. Clear the current contents of subMenuEl.
